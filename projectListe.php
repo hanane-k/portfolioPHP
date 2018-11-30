@@ -5,7 +5,6 @@ require_once "model/db.php";
 include "model/projectManager.php";
 // definir la variable $project comme la fonction qui reccupere les projets
 $project = getProject($db);
-var_dump($project);
 ?>
 <a href="admin.php">Retour à la page Admin</a>
 <table class="table">
