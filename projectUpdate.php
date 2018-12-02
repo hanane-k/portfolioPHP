@@ -19,6 +19,10 @@ $projet = getOneProject($id, $db);
     <input type="text" class="form-control" id="titre" name="nom" <?php echo "value='" . $projet["nom"] . "'"; ?>>
   </div>
   <div class="form-group col-sm-12 col-md-7 col-lg-6">
+    <label for="IDimage">image : </label>
+    <input type="file" class="form-control" id="IDimage" name="IDimage" <?php echo "value='" . $projet["IDimage"] . "'"; ?>>
+  </div>
+  <div class="form-group col-sm-12 col-md-7 col-lg-6">
     <label for="description">Description : </label>
     <textarea name="description" id="description" cols="80" rows="20"><?php echo $projet["description"]; ?></textarea>
   </div>

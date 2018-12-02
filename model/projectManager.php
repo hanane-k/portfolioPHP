@@ -31,4 +31,13 @@ function deleteProject($id, $db) {
     return $result;
 }
 
+// fonction qui MODIFIE un projet
+function updateProject($project, $db) {
+    $req = $db->prepare("UPDATE projets SET nom = :nom, description = :description WHERE IDprojet = :IDprojet");
+    return $req->execute([
+        "nom" => $project["nom"],
+        "IDimage" => $project["IDprojet"],
+        "description" => $project["description"]
+    ]);
+}
 ?>

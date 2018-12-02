@@ -21,7 +21,8 @@ include_once "template/navAdmin.php";
     <input type="file" class="form-control" id="IDimage" name="IDimage">
   </div>
   <div class="form-group col-sm-12 col-md-7 col-lg-6">
-    <textarea name="description" id="description" cols="80" rows="20" class="form-control">Description : </textarea>
+  <label for="description">Description : </label>
+    <textarea name="description" id="description" cols="80" rows="20" class="form-control"></textarea>
   </div>
   <button type="submit" class="btn btn-primary col-1 flex center ml-5 ">Ajouter</button>
 </form>

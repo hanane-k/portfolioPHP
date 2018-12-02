@@ -13,7 +13,7 @@ if ($_GET["action"] === "add") {
     $lastId = getLastIDimg($db);
     addProject($_POST, $lastId["LAST_INSERT_ID()"], $db);
     move_uploaded_file($_FILES["IDimage"]["tmp_name"], $chemin);
-    // header("location: projectListe.php");
+    header("location: projectListe.php");
     exit;
 }
 //si l'action qu'on va realiser est SUPPRIMER un projet:
@@ -28,7 +28,7 @@ if ($_GET["action"] === "delete") {
 
 //si l'action qu'on va realiser est MODIFIER un projet:
 if ($_GET["action"] === "update") {
-    getOneProject($_POST, $db);
+    updateProject($_POST, $db);
     header("location: projectListe.php");
     exit;
 }
