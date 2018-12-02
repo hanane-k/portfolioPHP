@@ -22,7 +22,7 @@
 <body>
   <!-- =============start header============== -->
   <header>
-    <div id="header" class="header center">
+    <div id="header" class="header center text-center mb-5">
       <h2><a class="containerLogo flex column" href="index.php"><img class="logo" src="img/logo.png" alt="logo">Retour à l'acceuil</a></h2>
     </div>
   </header>

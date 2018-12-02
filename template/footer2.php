@@ -1,6 +1,6 @@
 </main> 
   <!-- =============start footer============== -->
-  <footer>
+  <footer class="mt-5">
     <div class="flex around">
       <a href="https://twitter.com/hanane0619"><i class="fab fa-twitter"></i></a>
       <a href="https://plus.google.com/117110137370607027161"><i class="fab fa-google-plus-g"></i></a>
