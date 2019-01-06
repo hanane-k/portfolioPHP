@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Hanane NAMOUN-Portfolio</title>
+  <title>Hanane KARRAD-Portfolio</title>
   <meta name="description" content="Je suis développeuse web junior. curieuse, patiente et passionnée par les nouvelles technologies">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

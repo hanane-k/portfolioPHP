@@ -1,8 +1,8 @@
 <?php
 //fonction qui ajoute un projet
-function addProject($project, $IDimage, $db) {
-    $req = $db->prepare("INSERT INTO projets (nom, description, IDimage) VALUES (?, ?, ?)");
-    $req->execute([$project["nom"], $project["description"], $IDimage]);
+function addProject($projet, $IDimage, $db) {
+    $req = $db->prepare("INSERT INTO projets (IDprojet, nom, description, IDimage) VALUES (?, ?, ?, ?)");
+    $req->execute([$projet["IDprojet"], $projet["nom"], $projet["description"], $IDimage]);
     $req->CloseCursor();
 }
 
@@ -32,12 +32,14 @@ function deleteProject($id, $db) {
 }
 
 // fonction qui MODIFIE un projet
-function updateProject($project, $db) {
-    $req = $db->prepare("UPDATE projets SET nom = :nom, description = :description WHERE IDprojet = :IDprojet");
-    return $req->execute([
-        "nom" => $project["nom"],
-        "IDimage" => $project["IDprojet"],
-        "description" => $project["description"]
+function updateProject($projet, $db) {
+    $req = $db->prepare("UPDATE projets SET nom = :nom, description = :description, IDimage = :IDimage WHERE IDprojet = :IDprojet");
+    $result = $req->execute([
+        "nom" => $projet["nom"],
+        "description" => $projet["description"],
+        "IDimage" => $projet["IDimage"],
+        "IDprojet" => $projet["IDprojet"]
     ]);
+    return $result;
 }
 ?>

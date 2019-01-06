@@ -11,6 +11,10 @@ include "model/biographieManager.php";
 $id = $_GET["id"];
 $biographie = getOneBiographie($id, $db);
 ?>
+<div class="flex around marginBottom">
+<a href="admin.php" class="bouton">Retour à la page Admin</a><br>
+<a href="biographie.php" class="bouton">Ajouter une biographie</a>
+</div>
 
 <form action="biographieTreatment.php?action=update" method="post">
   <div class="form-group col-sm-12 col-md-7 col-lg-6">

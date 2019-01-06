@@ -8,6 +8,7 @@ include "template/header2.php";
 include_once "template/navAdmin.php";
 
 ?>
+<a href="admin.php">Retour à la page Admin</a><br>
 
 <form action="biographieTreatment.php?action=add" method="post">
   <div class="form-group col-sm-12 col-md-7 col-lg-6">

@@ -11,4 +11,10 @@ function getLastIDimg($db) {
     $result = $req->fetch(PDO::FETCH_ASSOC);
     return $result; 
 }
+
+function getImage($db) {
+    $req = $db->query("SELECT nomImg FROM image");
+    $result = $req->fetch(PDO::FETCH_ASSOC);
+    return $result;     
+}
 ?>

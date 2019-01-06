@@ -22,8 +22,6 @@ if ($_GET["action"] === "delete") {
     deleteProject($id, $db);
     header("location: projectListe.php");
     exit;
-    // var_dump($id);
-
 }
 
 //si l'action qu'on va realiser est MODIFIER un projet:

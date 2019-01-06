@@ -5,7 +5,10 @@ include "model/biographieManager.php";
 //definir la variable $biographie comme la fonction qui reccupere les biographie
 $biographie = getBiographie($db);
 ?>
-<a href="admin.php">Retour à la page Admin</a>
+<div class="flex around marginBottom">
+<a href="admin.php" class="bouton">Retour à la page Admin</a><br>
+<a href="biographie.php" class="bouton">Ajouter une biographie</a>
+</div>
 <table class="table">
   <thead>
     <tr>

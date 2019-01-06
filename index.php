@@ -1,31 +1,16 @@
-<!doctype html>
-<html class="no-js" lang="fr">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Hanane NAMOUN-Portfolio</title>
-  <meta name="description" content="Je suis développeuse web junior. curieuse, patiente et passionnée par les nouvelles technologies">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-  <link rel="icon" href="img/logo.png" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Acme|El+Messiri" rel="stylesheet"> 
-</head>
-
-<body>
 
   <!-- =============start header============== -->
   <?php
     include "template/header.php";
     require_once "model/db.php";
-    $requete = $db->query("SELECT * FROM image");
-$result = $requete->fetchAll(PDO::FETCH_ASSOC);
+    require "model/biographieManager.php";
+    require "model/projectManager.php";
+    require "model/imageManager.php";
+    $biographie = getBiographie($db);
+    $projet = getProject($db);
+    $images = getImage($db);
+//     $requete = $db->query("SELECT * FROM image");
+// $result = $requete->fetchAll(PDO::FETCH_ASSOC);
 
 
   ?>
@@ -41,11 +26,24 @@ $result = $requete->fetchAll(PDO::FETCH_ASSOC);
         <h2><span class="span">Back-end</span></h2>
       </section>
     </div>
-    <section class="aPropo flex column center marginBottom">
-      <a><h3 id="propos">A Propos</h3></a>
-      <img class="avatar" src="img/avatar.png" alt="mon avatar">
-      <p><strong>Bonjour</strong> je m'appelle <span class="span">Hanane</span>,<br>Je suis développeuse web junior, <span class="span">Back-End</span>.<br> Munie d'un Master 2 en Gestion de l'Environnement, j'ai rencontrer des difficultés pour trouver du travail, et après qu'eleques temps j'ai décidé de me convertir vers le monde du numérique. Passionnée par la créativité et le développement web, je suis actuellement une formation de Développement WEB et WEB-Mobile depuis Septembre 2018 à l'ADEP de Roubaix, grâce à la quelle je développe mes qualités professionnelles.<br>Ambitieuse et créative sont juste un échantillon de mes atouts professionnels, avec un très bon esprit de groupe et à la fois autonome; je saurai m'integrer à tout type de projet.</p>
-    </section>
+    <div class="flex column center">
+      <section class="aPropo marginBottom">
+        <a><h3 id="propos">
+          <?php 
+        foreach ($biographie as $key => $value) {
+          echo $value["nom"]; 
+          ?>
+        </h3></a>
+        <img class="avatar" src="img/avatar.png" alt="mon avatar">
+        <!-- <p><strong>Bonjour</strong> je m'appelle <span class="span">Hanane</span>,<br>Je suis développeuse web junior, <span class="span">Back-End</span>.<br> Munie d'un Master 2 en Gestion de l'Environnement, j'ai rencontrer des difficultés pour trouver du travail, et après qu'eleques temps j'ai décidé de me convertir vers le monde du numérique. Passionnée par la créativité et le développement web, je suis actuellement une formation de Développement WEB et WEB-Mobile depuis Septembre 2018 à l'ADEP de Roubaix, grâce à la quelle je développe mes qualités professionnelles.<br>Ambitieuse et créative sont juste un échantillon de mes atouts professionnels, avec un très bon esprit de groupe et à la fois autonome; je saurai m'integrer à tout type de projet.</p> -->
+        <p class="mt-4"><?php 
+          echo $value["description"]; ?></p>
+        <?php
+        }
+        ?>
+
+      </section>
+    </div>
     <section class="containerComp flex column center marginBottom">
       <a><h3 id="compétence">Compétences</h3></a>
       <p>Au cours de ma formation a l'ADEP, j'ai développé ma créativité et ma capacité de créer et produire et reproduire des sites et des pages-web:</p>
@@ -53,12 +51,12 @@ $result = $requete->fetchAll(PDO::FETCH_ASSOC);
         <div class="competence flex column center">
           <h4>Développement</h4>
           <i class="fas fa-cogs"></i>
-          <p>Création de sites en html et css et développement des bases de données (php, MySql).</p>
+          <p>Création de sites en html et css (sites statiques) et développement des bases de données (php, MySql) (sites dynamiques).</p>
         </div>
         <div class="competence flex column center">
           <h4>Intégration</h4>
           <i class="fas fa-code"></i>
-          <p> HTML 5 / CSS 3 Javascript & PHP. Framework Bootstrap Compatibilité navigateurs (Firefox, Chrome).</p>
+          <p> HTML 5 / CSS 3 JavaScript & PHP. Framework, Bootstrap, Compatibilité navigateurs (Firefox, Chrome), orientée objet, integration MVC.</p>
         </div>
         <div class="competence flex column center">
           <h4>Responsive Design</h4>
@@ -71,10 +69,39 @@ $result = $requete->fetchAll(PDO::FETCH_ASSOC);
       <a><h3 id="portfolio">Portfolio</h3></a>
       <p>Aperçu de mes différents Projets réalisés.</p>
       <div class="flex center wrap">
+        <!-- <div class="projet flex column center"> -->
+        <?php 
+        // foreach ($projet as $key => $value) {
+        ?>
+        <h4>
+        <?php
+          // echo $value["nom"]; 
+          ?>
+        </h4>
+        <!-- <h4>Le CV</h4> -->
+          <!-- <img class="imgProjet" src=" -->
+          <?php 
+          // foreach ($images as $key => $image) {
+          // echo $images["nomImg"]; 
+          // }
+          ?>
+          <!-- " alt="image de CV"> -->
+          <p><?php
+          // echo $value["description"]; 
+          ?></p>
+          <!-- <div class="flex btn">  
+            <p><a class="bouton" href="cv.php">VOIR</a></p>
+            <p><a class="bouton" href="https://github.com/hanane-k/cv" target="_blank">GitHub</a></p>
+          </div> -->
+          <?php
+        // }
+           ?>
+
+        <!-- </div> -->
         <div class="projet flex column center">
           <h4>Le CV</h4>
           <img class="imgProjet" src="img/CV.png" alt="image de CV">
-          <p>Une réalisation d'un CV en html et css</p>
+          <p>Une réalisation d'une page web de CV en html et css. mon premier projet au sein de ma formation à l'ADEP de Roubaix.</p>
           <div class="flex btn">  
             <p><a class="bouton" href="cv.php">VOIR</a></p>
             <p><a class="bouton" href="https://github.com/hanane-k/cv" target="_blank">GitHub</a></p>
@@ -114,7 +141,7 @@ $result = $requete->fetchAll(PDO::FETCH_ASSOC);
           <div class="flex btn">  
             <p><a class="bouton" href="emmanuelle.php">VOIR</a></p>
             <p><a class="bouton" href="https://github.com/hanane-k/recette-Emmanuelle" target="_blank">GitHub</a></p>
-          </div>
+          </div> 
         </div>
       </div>
     </section>
@@ -150,19 +177,3 @@ $result = $requete->fetchAll(PDO::FETCH_ASSOC);
   ?>
 
   <!-- =============end footer============== -->
-  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-</body>
-
-</html>
-

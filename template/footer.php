@@ -1,7 +1,7 @@
 </main>
 <!-- =============start footer============== -->
   <footer>
-    <p><em>Site réalisé par Hanane NAMOUN<br>Apprentie à l'ADEP<br>SIMPLON promo: 2018</em></p>
+    <p><em>Site réalisé par Hanane KARRAD<br>Apprentie à l'ADEP<br>SIMPLON promo: 2018</em></p>
     <div class="flex around reseau">
       <a href="https://twitter.com/hanane0619"><i class="fab fa-twitter"></i></a>
       <a href="https://plus.google.com/117110137370607027161"><i class="fab fa-google-plus-g"></i></a>

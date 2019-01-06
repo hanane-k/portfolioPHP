@@ -203,7 +203,7 @@ h2 > span, .span {
     background-size: cover;
     height: 80vh;
 }
-.aPropo p, .containerComp > p, .portf > p, .projet p, .singlPr p, .btn {
+.aPropo, .containerComp > p, .portf > p, .projet p, .singlPr p, .btn {
     width: 70%;
 }
 .projet, .competence {

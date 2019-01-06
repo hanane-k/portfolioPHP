@@ -1,24 +1,3 @@
-<!doctype html>
-<html class="no-js" lang="fr">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Hanane NAMOUN-Portfolio</title>
-  <meta name="description" content="Je suis développeuse web junior. curieuse, patiente et passionnée par les nouvelles technologies">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-  <link rel="icon" href="img/logo.png" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Acme|El+Messiri" rel="stylesheet"> 
-</head>
-
-<body>
 
   <!-- =============start header============== -->
 
@@ -33,7 +12,7 @@
   <main>
     <div class="containerNom flex center">
       <section class="nom">
-        <h1>Hanane NAMOUN</h1>
+        <h1>Hanane KARRAD</h1>
         <h2>Développement web</h2>
         <h2><span class="span">Back-end</span></h2>
       </section>
@@ -62,19 +41,3 @@
     ?>
 
   <!-- =============end footer============== -->
-
-  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-</body>
-
-</html>

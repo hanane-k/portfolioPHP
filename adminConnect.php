@@ -5,7 +5,7 @@ include "template/header2.php";
 ?>  
     <div class="containerNom flex center marginBottom">
       <section class="nom">
-        <h1>Hanane NAMOUN</h1>
+        <h1>Hanane KARRAD</h1>
         <h2>Développement web</h2>
         <h2><span class="span">Back-end</span></h2>
       </section>
